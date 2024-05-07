@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Crawler</title>
+</head>
+<body>
+    <h1>Start Web Crawler</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.start_url.label }}<br>
+            {{ form.start_url(size=32) }}<br>
+        </p>
+        <p>
+            {{ form.output_dir.label }}<br>
+            {{ form.output_dir(size=32) }}<br>
+        </p>
+        <p>
+            {{ form.max_workers.label }}<br>
+            {{ form.max_workers(size=32) }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
